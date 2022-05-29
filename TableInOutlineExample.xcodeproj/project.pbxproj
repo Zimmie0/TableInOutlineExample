@@ -10,6 +10,17 @@
 		A63C1C362844115600BBBB27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C352844115600BBBB27 /* AppDelegate.swift */; };
 		A63C1C382844115800BBBB27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A63C1C372844115800BBBB27 /* Assets.xcassets */; };
 		A63C1C3B2844115800BBBB27 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A63C1C392844115800BBBB27 /* MainMenu.xib */; };
+		A63C1C45284411F600BBBB27 /* contentsArray Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C44284411F600BBBB27 /* contentsArray Extensions.swift */; };
+		A63C1C48284411FC00BBBB27 /* Outline Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C46284411FC00BBBB27 /* Outline Delegate.swift */; };
+		A63C1C49284411FC00BBBB27 /* Object Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C47284411FC00BBBB27 /* Object Factory.swift */; };
+		A63C1C4E2844135400BBBB27 /* HostedNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C4D2844135400BBBB27 /* HostedNetworkAdapter.swift */; };
+		A63C1C522844136A00BBBB27 /* HostedDisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C512844136A00BBBB27 /* HostedDisk.swift */; };
+		A63C1C542844136E00BBBB27 /* HostedFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C532844136E00BBBB27 /* HostedFolder.swift */; };
+		A63C1C562844137B00BBBB27 /* HostedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C552844137B00BBBB27 /* HostedVM.swift */; };
+		A63C1C58284413A400BBBB27 /* HostedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C57284413A400BBBB27 /* HostedContainer.swift */; };
+		A63C1C5B284413BA00BBBB27 /* Set up Core Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C5A284413BA00BBBB27 /* Set up Core Data.swift */; };
+		A63C1C5D284414B900BBBB27 /* DiskTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C5C284414B900BBBB27 /* DiskTableView.swift */; };
+		A63C1C6128441B2800BBBB27 /* NetworkAdapterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C1C6028441B2800BBBB27 /* NetworkAdapterTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +29,17 @@
 		A63C1C372844115800BBBB27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A63C1C3A2844115800BBBB27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A63C1C3C2844115800BBBB27 /* TableInOutlineExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TableInOutlineExample.entitlements; sourceTree = "<group>"; };
+		A63C1C44284411F600BBBB27 /* contentsArray Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "contentsArray Extensions.swift"; sourceTree = "<group>"; };
+		A63C1C46284411FC00BBBB27 /* Outline Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Outline Delegate.swift"; sourceTree = "<group>"; };
+		A63C1C47284411FC00BBBB27 /* Object Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Object Factory.swift"; sourceTree = "<group>"; };
+		A63C1C4D2844135400BBBB27 /* HostedNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedNetworkAdapter.swift; sourceTree = "<group>"; };
+		A63C1C512844136A00BBBB27 /* HostedDisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedDisk.swift; sourceTree = "<group>"; };
+		A63C1C532844136E00BBBB27 /* HostedFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedFolder.swift; sourceTree = "<group>"; };
+		A63C1C552844137B00BBBB27 /* HostedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedVM.swift; sourceTree = "<group>"; };
+		A63C1C57284413A400BBBB27 /* HostedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedContainer.swift; sourceTree = "<group>"; };
+		A63C1C5A284413BA00BBBB27 /* Set up Core Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set up Core Data.swift"; sourceTree = "<group>"; };
+		A63C1C5C284414B900BBBB27 /* DiskTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskTableView.swift; sourceTree = "<group>"; };
+		A63C1C6028441B2800BBBB27 /* NetworkAdapterTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAdapterTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,11 +73,30 @@
 			isa = PBXGroup;
 			children = (
 				A63C1C352844115600BBBB27 /* AppDelegate.swift */,
+				A63C1C47284411FC00BBBB27 /* Object Factory.swift */,
+				A63C1C46284411FC00BBBB27 /* Outline Delegate.swift */,
+				A63C1C44284411F600BBBB27 /* contentsArray Extensions.swift */,
+				A63C1C59284413AC00BBBB27 /* Core Data */,
+				A63C1C5C284414B900BBBB27 /* DiskTableView.swift */,
+				A63C1C6028441B2800BBBB27 /* NetworkAdapterTableView.swift */,
 				A63C1C372844115800BBBB27 /* Assets.xcassets */,
 				A63C1C392844115800BBBB27 /* MainMenu.xib */,
 				A63C1C3C2844115800BBBB27 /* TableInOutlineExample.entitlements */,
 			);
 			path = TableInOutlineExample;
+			sourceTree = "<group>";
+		};
+		A63C1C59284413AC00BBBB27 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				A63C1C5A284413BA00BBBB27 /* Set up Core Data.swift */,
+				A63C1C57284413A400BBBB27 /* HostedContainer.swift */,
+				A63C1C532844136E00BBBB27 /* HostedFolder.swift */,
+				A63C1C552844137B00BBBB27 /* HostedVM.swift */,
+				A63C1C512844136A00BBBB27 /* HostedDisk.swift */,
+				A63C1C4D2844135400BBBB27 /* HostedNetworkAdapter.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,6 +109,7 @@
 				A63C1C2E2844115600BBBB27 /* Sources */,
 				A63C1C2F2844115600BBBB27 /* Frameworks */,
 				A63C1C302844115600BBBB27 /* Resources */,
+				A63C1C5F2844195900BBBB27 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -123,12 +165,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A63C1C5F2844195900BBBB27 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A63C1C2E2844115600BBBB27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A63C1C5D284414B900BBBB27 /* DiskTableView.swift in Sources */,
 				A63C1C362844115600BBBB27 /* AppDelegate.swift in Sources */,
+				A63C1C4E2844135400BBBB27 /* HostedNetworkAdapter.swift in Sources */,
+				A63C1C58284413A400BBBB27 /* HostedContainer.swift in Sources */,
+				A63C1C5B284413BA00BBBB27 /* Set up Core Data.swift in Sources */,
+				A63C1C48284411FC00BBBB27 /* Outline Delegate.swift in Sources */,
+				A63C1C6128441B2800BBBB27 /* NetworkAdapterTableView.swift in Sources */,
+				A63C1C522844136A00BBBB27 /* HostedDisk.swift in Sources */,
+				A63C1C542844136E00BBBB27 /* HostedFolder.swift in Sources */,
+				A63C1C45284411F600BBBB27 /* contentsArray Extensions.swift in Sources */,
+				A63C1C49284411FC00BBBB27 /* Object Factory.swift in Sources */,
+				A63C1C562844137B00BBBB27 /* HostedVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -250,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
