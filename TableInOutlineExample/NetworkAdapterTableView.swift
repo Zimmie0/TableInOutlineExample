@@ -45,7 +45,7 @@ class NetworkAdapterTable: NSTableCellView, ObservableObject {
         let object: HostedNetworkAdapter
         var body: some View {
             HStack {
-                Image(systemName: "internaldrive")
+                Image(systemName: "network")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(Color.black)
