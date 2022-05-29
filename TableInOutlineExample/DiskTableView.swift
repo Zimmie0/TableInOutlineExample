@@ -8,7 +8,8 @@
 import Cocoa
 import SwiftUI
 
-class DiskTable: NSTableCellView, ObservableObject {
+class DiskTable: NSView, ObservableObject {
+    @objc @Published dynamic var objectValue: Any?
     lazy var suiView: NSView = NSHostingView(rootView: ViewContents(wrapperView: self))
 
     required init?(coder: NSCoder) {
