@@ -32,14 +32,23 @@ class DiskTable: NSView, ObservableObject {
         @ObservedObject var wrapperView: DiskTable
         var body: some View {
             VStack {
-                ForEach((wrapperView.objectValue as? HostedVM)?.disksArray ?? [], id: \.self) { item in
-                    ObjectNamePlusIcon(object: item as HostedDisk)
-                        .frame(height: 16.0, alignment: .leading)
-                }
+				if let workingVM = wrapperView.objectValue as? HostedVM {
+					DiskList(workingVM: workingVM)
+				}
                 Spacer(minLength: 0)
             }
             .padding(3)
         }
+    }
+
+    struct DiskList: View {
+		@ObservedObject var workingVM: HostedVM
+		var body: some View {
+			ForEach(workingVM.disksArray, id: \.self) { item in
+				ObjectNamePlusIcon(object: item as HostedDisk)
+					.frame(height: 16.0, alignment: .leading)
+			}
+		}
     }
 
     struct ObjectNamePlusIcon: View {

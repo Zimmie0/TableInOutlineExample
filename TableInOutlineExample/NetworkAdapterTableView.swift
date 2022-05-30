@@ -32,15 +32,24 @@ class NetworkAdapterTable: NSView, ObservableObject {
         @ObservedObject var wrapperView: NetworkAdapterTable
         var body: some View {
             VStack {
-                ForEach((wrapperView.objectValue as? HostedVM)?.networkAdaptersArray ?? [], id: \.self) { item in
-                    ObjectNamePlusIcon(object: item as HostedNetworkAdapter)
-                        .frame(height: 16.0, alignment: .leading)
-                }
+				if let workingVM = wrapperView.objectValue as? HostedVM {
+					NetworkList(workingVM: workingVM)
+				}
                 Spacer(minLength: 0)
             }
             .padding(3)
         }
     }
+
+	struct NetworkList: View {
+		@ObservedObject var workingVM: HostedVM
+		var body: some View {
+			ForEach(workingVM.networkAdaptersArray, id: \.self) { item in
+				ObjectNamePlusIcon(object: item as HostedNetworkAdapter)
+					.frame(height: 16.0, alignment: .leading)
+			}
+		}
+	}
 
     struct ObjectNamePlusIcon: View {
         let object: HostedNetworkAdapter
