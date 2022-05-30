@@ -139,9 +139,19 @@
                                     <action selector="addADiskWithSender:" target="Voe-Tx-rLC" id="yPz-Cz-1Jd"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Rename all Disks" keyEquivalent="E" id="XcA-Rs-6d3">
+                                <connections>
+                                    <action selector="renameDisksWithSender:" target="Voe-Tx-rLC" id="N4J-x2-Cpp"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Add a Network Adapter" keyEquivalent="F" id="yLs-Op-rNx">
                                 <connections>
                                     <action selector="addANetworkAdapterWithSender:" target="Voe-Tx-rLC" id="OI2-fo-al1"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Rename all Network Adapters" keyEquivalent="R" id="Lxg-Qj-fe4">
+                                <connections>
+                                    <action selector="renameNetworksWithSender:" target="Voe-Tx-rLC" id="Bel-MS-JTj"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="qnO-nw-mTN"/>

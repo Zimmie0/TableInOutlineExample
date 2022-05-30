@@ -52,7 +52,7 @@ class DiskTable: NSView, ObservableObject {
     }
 
     struct ObjectNamePlusIcon: View {
-        let object: HostedDisk
+        @ObservedObject var object: HostedDisk
         var body: some View {
             HStack {
                 Image(systemName: "internaldrive")

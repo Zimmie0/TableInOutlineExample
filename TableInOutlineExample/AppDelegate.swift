@@ -66,4 +66,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         try? container.viewContext.save()
     }
+
+	@IBAction func renameDisks(sender: Any?) {
+		let diskFetchRequest = HostedDisk.fetchRequest()
+		let allDisks = try! container.viewContext.fetch(diskFetchRequest) as! [HostedDisk]
+		for workingDisk in allDisks {
+			workingDisk.name = workingDisk.id.uuidString
+		}
+		try? container.viewContext.save()
+	}
+
+	@IBAction func renameNetworks(sender: Any?) {
+		let networkAdapterFetchRequest = HostedNetworkAdapter.fetchRequest()
+		let allNetworks = try! container.viewContext.fetch(networkAdapterFetchRequest) as! [HostedNetworkAdapter]
+		for workingNetwork in allNetworks {
+			workingNetwork.name = workingNetwork.id.uuidString
+		}
+		try? container.viewContext.save()
+	}
 }

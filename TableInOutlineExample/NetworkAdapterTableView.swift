@@ -52,7 +52,7 @@ class NetworkAdapterTable: NSView, ObservableObject {
 	}
 
     struct ObjectNamePlusIcon: View {
-        let object: HostedNetworkAdapter
+		@ObservedObject var object: HostedNetworkAdapter
         var body: some View {
             HStack {
                 Image(systemName: "network")
