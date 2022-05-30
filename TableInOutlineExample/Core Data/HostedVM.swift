@@ -16,16 +16,16 @@ public class HostedVM: HostedContainer {
 	@NSManaged var disks: Set<HostedDisk>
 	@NSManaged var networkAdapters: Set<HostedNetworkAdapter>
 
-    @objc public dynamic var disksArray: [HostedDisk] {
-        return disks.sorted {
-            $0.name < $1.name
-        }
-    }
-    @objc public dynamic var networkAdaptersArray: [HostedNetworkAdapter] {
-        return networkAdapters.sorted {
-            $0.name < $1.name
-        }
-    }
+	@objc public dynamic var disksArray: [HostedDisk] {
+		return disks.sorted {
+			$0.name < $1.name
+		}
+	}
+	@objc public dynamic var networkAdaptersArray: [HostedNetworkAdapter] {
+		return networkAdapters.sorted {
+			$0.name < $1.name
+		}
+	}
 }
 
 let hostedVMEntity: NSEntityDescription = {

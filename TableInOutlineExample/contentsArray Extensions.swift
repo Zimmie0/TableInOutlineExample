@@ -19,7 +19,7 @@ extension HostedFolder {
 	}
 	@objc public dynamic var contentsArray: [HostedContainer] {
 		return contents.sorted {
-            return $0.name.compare($1.name, options: [.numeric]) == .orderedAscending
+			return $0.name.compare($1.name, options: [.numeric]) == .orderedAscending
 		}
 	}
 }
