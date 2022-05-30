@@ -134,6 +134,17 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Edit" id="W48-6f-4Dl">
                         <items>
+                            <menuItem title="Add a Disk" keyEquivalent="D" id="jTQ-Hr-5os" userLabel="Add a Disk">
+                                <connections>
+                                    <action selector="addADiskWithSender:" target="Voe-Tx-rLC" id="yPz-Cz-1Jd"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Add a Network Adapter" keyEquivalent="F" id="yLs-Op-rNx">
+                                <connections>
+                                    <action selector="addANetworkAdapterWithSender:" target="Voe-Tx-rLC" id="OI2-fo-al1"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="qnO-nw-mTN"/>
                             <menuItem title="Undo" keyEquivalent="z" id="dRJ-4n-Yzg">
                                 <connections>
                                     <action selector="undo:" target="-1" id="M6e-cu-g7V"/>
@@ -784,7 +795,7 @@
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="JDK-8w-OJp">
-                            <rect key="frame" x="1" y="343" width="528" height="16"/>
+                            <rect key="frame" x="1" y="343" width="598" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="QGZ-3q-50p">

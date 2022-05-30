@@ -48,4 +48,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
     }
+
+    @IBAction func addADisk(sender: Any?) {
+        let vmFetchRequest = HostedVM.fetchRequest()
+        let allVMs = try! container.viewContext.fetch(vmFetchRequest) as! [HostedVM]
+        for workingVM in allVMs {
+            workingVM.disks.insert(newDiskWithName("New Disk", context: container.viewContext))
+        }
+        try? container.viewContext.save()
+    }
+
+    @IBAction func addANetworkAdapter(sender: Any?) {
+        let vmFetchRequest = HostedVM.fetchRequest()
+        let allVMs = try! container.viewContext.fetch(vmFetchRequest) as! [HostedVM]
+        for workingVM in allVMs {
+            workingVM.networkAdapters.insert(newNetworkAdapterWithName("New Network", context: container.viewContext))
+        }
+        try? container.viewContext.save()
+    }
 }
