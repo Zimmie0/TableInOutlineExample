@@ -44,8 +44,8 @@ class NetworkAdapterTable: NSView, ObservableObject {
 	struct NetworkList: View {
 		@ObservedObject var workingVM: HostedVM
 		var body: some View {
-			ForEach(workingVM.networkAdaptersArray, id: \.self) { item in
-				ObjectNamePlusIcon(object: item as HostedNetworkAdapter)
+			ForEach(workingVM.networkAdaptersArray, id: \.self) { workingNetworkAdapter in
+				ObjectNamePlusIcon(object: workingNetworkAdapter)
 					.frame(height: 16.0, alignment: .leading)
 			}
 		}

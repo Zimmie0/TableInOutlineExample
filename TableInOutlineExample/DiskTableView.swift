@@ -44,8 +44,8 @@ class DiskTable: NSView, ObservableObject {
     struct DiskList: View {
 		@ObservedObject var workingVM: HostedVM
 		var body: some View {
-			ForEach(workingVM.disksArray, id: \.self) { item in
-				ObjectNamePlusIcon(object: item as HostedDisk)
+			ForEach(workingVM.disksArray, id: \.self) { workingDisk in
+				ObjectNamePlusIcon(object: workingDisk)
 					.frame(height: 16.0, alignment: .leading)
 			}
 		}
