@@ -18,7 +18,7 @@ class NetworkAdapterTable: NSView, ObservableObject {
 		self.addSubview(self.suiView)
 		suiView.translatesAutoresizingMaskIntoConstraints = false
 		suiView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-		suiView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+		suiView.bottomAnchor.constraint(greaterThanOrEqualTo: self.bottomAnchor).isActive = true
 		suiView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
 		suiView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
 	}
