@@ -44,7 +44,6 @@ extension HostedFolder {
 
 extension HostedVM {
 	@objc override public var rowHeight: CGFloat {
-		print("Checking the row height for a VM.")
 		let maxCount = [
 			self.disks.count,
 			self.networkAdapters.count,

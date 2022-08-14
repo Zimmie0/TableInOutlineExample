@@ -24,7 +24,6 @@ class VMOutlineDelegate: NSObject,
 	}
 
 	@objc func contextDidSave(_ notification: Notification) {
-		print("VMOutlineDelegate.contextDidSave called.")
 		let allIndexes = IndexSet(integersIn: 0..<(outlineView?.numberOfRows ?? 0))
 		outlineView?.noteHeightOfRows(withIndexesChanged: allIndexes)
 	}
@@ -62,7 +61,6 @@ class VMOutlineDelegate: NSObject,
 		_ outlineView: NSOutlineView,
 		heightOfRowByItem item: Any)
 	-> CGFloat {
-		print("outlineView(_:heightOfRowByItem:) called")
 		guard let workingItem = (item as? NSTreeNode)?.representedObject as? HostedContainer
 		else { return CGFloat(24) }
 		return workingItem.rowHeight
