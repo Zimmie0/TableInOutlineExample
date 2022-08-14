@@ -32,7 +32,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		vmTreeView.dataSource = vmViewDelegate
 		vmTreeView.delegate = vmViewDelegate
-		vmTreeView.usesAutomaticRowHeights = true
+		vmViewDelegate.outlineView = vmTreeView
+//		vmTreeView.usesAutomaticRowHeights = true
 		objectFactory(context: container.viewContext)
 		let tenantFetch = HostedFolder.fetchRequest()
 		tenantFetch.fetchLimit = 1

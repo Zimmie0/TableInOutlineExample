@@ -12,6 +12,23 @@ import SwiftUI
 class VMOutlineDelegate: NSObject,
 						 NSOutlineViewDataSource,
 						 NSOutlineViewDelegate {
+	var outlineView: NSOutlineView?
+
+	override init() {
+		super.init()
+		NotificationCenter.default.addObserver(
+			self,
+			selector: #selector(contextDidSave(_:)),
+			name: Notification.Name.NSManagedObjectContextDidSave,
+			object: nil)
+	}
+
+	@objc func contextDidSave(_ notification: Notification) {
+		print("VMOutlineDelegate.contextDidSave called.")
+		let allIndexes = IndexSet(integersIn: 0..<(outlineView?.numberOfRows ?? 0))
+		outlineView?.noteHeightOfRows(withIndexesChanged: allIndexes)
+	}
+
 	// MARK: - NSOutlineViewDataSource
 	func outlineView(
 		_ outlineView: NSOutlineView,
@@ -39,6 +56,16 @@ class VMOutlineDelegate: NSObject,
 		}
 		print("It's not a section somehow?")
 		return nil
+	}
+
+	func outlineView(
+		_ outlineView: NSOutlineView,
+		heightOfRowByItem item: Any)
+	-> CGFloat {
+		print("outlineView(_:heightOfRowByItem:) called")
+		guard let workingItem = (item as? NSTreeNode)?.representedObject as? HostedContainer
+		else { return CGFloat(24) }
+		return workingItem.rowHeight
 	}
 }
 

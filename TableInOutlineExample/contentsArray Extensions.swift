@@ -29,3 +29,27 @@ extension HostedVM {
 		nil
 	}
 }
+
+extension HostedContainer {
+	@objc public var rowHeight: CGFloat {
+		return CGFloat(24)
+	}
+}
+
+extension HostedFolder {
+	@objc override public var rowHeight: CGFloat {
+		return CGFloat(24)
+	}
+}
+
+extension HostedVM {
+	@objc override public var rowHeight: CGFloat {
+		print("Checking the row height for a VM.")
+		let maxCount = [
+			self.disks.count,
+			self.networkAdapters.count,
+			1
+		].max()!
+		return CGFloat(maxCount * 24)
+	}
+}
