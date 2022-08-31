@@ -11,9 +11,9 @@ import CoreData
 extension HostedFolder {
 	@objc public override class func keyPathsForValuesAffectingValue(forKey key: String) -> Set<String> {
 		switch key {
-		case "contentsArray" :
+		case "contentsArray":
 			return Set(["contents"])
-		default :
+		default:
 			return super.keyPathsForValuesAffectingValue(forKey: key)
 		}
 	}
