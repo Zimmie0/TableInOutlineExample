@@ -4,12 +4,17 @@
 //
 //  Created by Zimmie on 5/29/22.
 //
+// swiftlint:disable identifier_name
 
 import Cocoa
 import SwiftUI
 
-class NetworkAdapterTable: NSView, ObservableObject {
-	@objc @Published dynamic var objectValue: Any?
+class NetworkAdapterTable: NSTableCellView, ObservableObject {
+	@Published var _objectValue: Any?
+	@objc override dynamic var objectValue: Any? {
+		get { return _objectValue }
+		set(newValue) { _objectValue = newValue }
+	}
 	lazy var suiView: NSView = NSHostingView(rootView: ViewContents(wrapperView: self))
 
 	required init?(coder: NSCoder) {
